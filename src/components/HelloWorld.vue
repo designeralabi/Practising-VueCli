@@ -1,8 +1,8 @@
 <template>
   <div class="hello">
     <h1>{{ msg }} {{ year }}</h1>
-    <p>
-      Learning Vue
+    <p @keyup="greet">
+      Learning Vue 
     </p>
   </div>
 </template>
@@ -16,7 +16,12 @@ export default {
       type: String,
       required: true
     }
-  }
+  },
+  methods: {
+    greet(){
+      console.log('enter key is pressed')
+    }
+  },
 }
 </script>
 
@@ -36,4 +41,4 @@ li {
 a {
   color: #42b983;
 }
-</style>
+</style> 
